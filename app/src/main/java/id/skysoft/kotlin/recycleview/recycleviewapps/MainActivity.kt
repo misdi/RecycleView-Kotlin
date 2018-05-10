@@ -1,5 +1,6 @@
 package id.skysoft.kotlin.recycleview.recycleviewapps
 
+import android.graphics.Bitmap
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import id.skysoft.kotlin.recycleview.recycleviewapps.data.PersonListAdapter
 import id.skysoft.kotlin.recycleview.recycleviewapps.model.Person
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.list_row.*
 
 class MainActivity : AppCompatActivity() {
     private var adapter: PersonListAdapter? = null
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             val person = Person()
             person.name = "Hidey " + i
             person.age = 20 + i
+            person.detail ="Are you human? $i"
             personList!!.add(person)
         }
         adapter!!.notifyDataSetChanged()

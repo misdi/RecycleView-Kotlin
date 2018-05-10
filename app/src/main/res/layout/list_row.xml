@@ -44,6 +44,15 @@
                 android:layout_toRightOf="@id/picView"
                 android:layout_below="@id/name"
                 android:text="Age"/>
+
+            <TextView
+                android:id="@+id/detailText"
+                android:layout_width="257dp"
+                android:layout_height="42dp"
+                android:layout_alignBottom="@+id/picView"
+                android:layout_marginBottom="-6dp"
+                android:layout_toEndOf="@+id/picView"
+                android:text="TextView" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

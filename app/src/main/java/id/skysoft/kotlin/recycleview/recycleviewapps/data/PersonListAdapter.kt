@@ -2,10 +2,12 @@ package id.skysoft.kotlin.recycleview.recycleviewapps.data
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import id.skysoft.kotlin.recycleview.recycleviewapps.DetailActivity
@@ -15,7 +17,6 @@ import kotlinx.android.synthetic.main.list_row.view.*
 
 class PersonListAdapter(private val list: ArrayList<Person>,
                         private val context: Context): RecyclerView.Adapter<PersonListAdapter.ViewHolder>(){
-
 
     override fun getItemCount(): Int {
         return list.size
@@ -35,8 +36,11 @@ class PersonListAdapter(private val list: ArrayList<Person>,
         fun binditem(person: Person){
             var name:TextView = itemView.findViewById(R.id.name) as TextView
             var age:TextView = itemView.findViewById(R.id.age) as TextView
+            var detail:TextView = itemView.findViewById(R.id.detailText) as TextView
+
             name.text = person.name
             age.text = person.age.toString()
+            detail.text = person.detail.toString()
 
             itemView.setOnClickListener{
                 val intent = Intent(context, DetailActivity::class.java)

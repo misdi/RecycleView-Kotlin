@@ -10,7 +10,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
         val getIntent = intent.extras
-        nameResult.text = "Your name : "+getIntent.get("name").toString()
+        nameResult.text = "Your name is : "+getIntent.get("name").toString()
         ageResult.text = getIntent.get("age").toString()
 
     }
